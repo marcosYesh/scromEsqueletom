@@ -1,0 +1,59 @@
+﻿<!--scripts de template para geração de dados dinamicos - esta é uma partional page
+modulo de cliente
+gera as linhas de Cliente na tela de pesquisa de cliente -->
+<script id="telefonesTLP" type="text/x-jquery-tmpl">
+    {{each lstTelefones}}
+    <tr>        
+        <td>${$value.tipoTelefone.descricao}</td>
+        <td>${$value.DDD} ${$value.numero} </td>
+        <td>${$value.operadora.descricao}</td>
+        <td>${$value.situacaoTelefone.descricao}</td>
+        <td><button id="btnAlterarTelefone${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Alterar.png")" /></button></td>
+        <td><button id="btnExcluirTelefene${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Excluir.png")" /></button></td>
+    </tr>
+    {{/each}}
+</script>
+<script id="emailTLP" type="text/x-jquery-tmpl">
+    {{each lstEmail}}
+    <tr>
+        <td>${$value.enderecoEmail}</td>
+        <td>${$value.departamentoEmail.descricao} </td>
+        <td>${$value.situacaoEmail.descricao}</td>
+         <td><button id="btnAlterarEmail${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Alterar.png")" /></button></td>
+        <td><button id="btnExcluirEmail${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Excluir.png")" /></button></td>
+    </tr>
+    {{/each}}
+</script>
+<script id="contatoAlternativoTLP" type="text/x-jquery-tmpl">
+    {{each lstContatoAlternativo}}
+    <tr>
+        <td>${$value.telefone.tipoTelefone.descricao}</td>
+        <td>${$value.nome}</td>
+        <td>${$value.telefone.DDD} ${$value.telefone.numero} </td>
+        <td>${$value.telefone.numero}</td>
+        <td>${$value.vinculo.descricao}</td>
+        <td>${$value.email.endereco}</td>
+        <td><button id="btnAlterarContatoAlternativo${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Alterar.png")" /></button></td>
+        <td><button id="btnExcluirContatoAlternativo${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Excluir.png")" /></button></td>
+    </tr>
+    {{/each}}
+</script>
+<script id="contatoEmergencialTLP" type="text/x-jquery-tmpl">
+    {{each lstContatoEmergencial}}
+    <tr>
+        <td>${$value.telefone.tipoTelefone.descricao}</td>
+        <td>${$value.nome}</td>
+        <td>${$value.telefone.DDD} ${$value.telefone.numero} </td>
+        <td>${$value.telefone.numero}</td>
+        <td>${$value.vinculo.descricao}</td>
+        <td>${$value.email.endereco}</td>
+        <td><button id="btnAlterarContatoEmergencial${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Alterar.png")" /></button></td>
+        <td><button id="btnExcluirContatoEmergencial${$index}" class="btn btn-primary"><img style="width:40%;height:40%" src="@Url.Content("~/Content/Images/Excluir.png")" /></button></td>
+    </tr>
+    {{/each}}
+</script>
+<script id="listaVaziaTLP" type="text/x-jquery-tmpl">
+    <tr>
+        <td></td>
+    </tr>
+</script>

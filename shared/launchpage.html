@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Course Launch Page</title>
+    <script type="text/javascript" src="js/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jQuery.tmpl.js"></script>
+    <script src="scormfunctions.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/launchpage.js"></script>
+</head>
+<body  onbeforeunload="doUnload(false);" onunload="doUnload();">
+
+   <iframe width="100%" id="tmplFrame" src=""></iframe>
+
+
+    <iframe width="100%" id="contentFrame" src=""></iframe>
+
+    <div id="navDiv">
+        <input type="button" value="<- Previous" id="butPrevious" onclick="doPrevious();"/>
+        <input type="button" value="Next ->" id="butNext" onclick="doNext();"/>
+        <input type="button" value="Exit" id="butExit" onclick="doExit();"/>
+    </div>
+
+</body>
+</html>
